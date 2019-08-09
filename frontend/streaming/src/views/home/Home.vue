@@ -1,42 +1,74 @@
 <template>
-    <div class="home">
-        <div class="row">
-            <div class="col-md-12">
-                <button class="col-md-3 btn btn-danger" @click="onLogout">Logout</button>
-                <br>
-                <br>
-                <h2>Titulo</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatibus, repellat labore explicabo saepe iste! Animi deserunt reprehenderit ipsa consequuntur, explicabo deleniti veniam? Earum vel, et nostrum totam aperiam pariatur.</p>
-            </div>
+  <div class="home">
+    <div class="row">
+      <div class="col-md-12">
+        <button class="col-md-3 btn btn-danger" @click="onLogout">
+          Logout
+        </button>
+        <br />
+        <br />
+        <h2>Titulo</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
+          voluptatibus, repellat labore explicabo saepe iste! Animi deserunt
+          reprehenderit ipsa consequuntur, explicabo deleniti veniam? Earum vel,
+          et nostrum totam aperiam pariatur.
+        </p>
+      </div>
 
-            <div class="col-md-6">
-                <h2>Titulo dos</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatibus, repellat labore explicabo saepe iste! Animi deserunt reprehenderit ipsa consequuntur, explicabo deleniti veniam? Earum vel, et nostrum totam aperiam pariatur.</p>
-                <button class="btn btn-primary">Ver mas</button>
-            </div>
-            <div class="col-md-6">
-                <h2>Titulo dos</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatibus, repellat labore explicabo saepe iste! Animi deserunt reprehenderit ipsa consequuntur, explicabo deleniti veniam? Earum vel, et nostrum totam aperiam pariatur.</p>
-                <button class="btn btn-primary">Ver mas</button>
-            </div>
-            <div class="col-md-6">
-                <h2>Titulo dos</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatibus, repellat labore explicabo saepe iste! Animi deserunt reprehenderit ipsa consequuntur, explicabo deleniti veniam? Earum vel, et nostrum totam aperiam pariatur.</p>
-                <button class="btn btn-primary">Ver mas</button>
-            </div>
-            <div class="col-md-6">
-                <h2>Titulo dos</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatibus, repellat labore explicabo saepe iste! Animi deserunt reprehenderit ipsa consequuntur, explicabo deleniti veniam? Earum vel, et nostrum totam aperiam pariatur.</p>
-                <button class="btn btn-primary">Ver mas</button>
-            </div>
-            <div class="col-md-6">
-                <h2>Titulo dos</h2>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem voluptatibus, repellat labore explicabo saepe iste! Animi deserunt reprehenderit ipsa consequuntur, explicabo deleniti veniam? Earum vel, et nostrum totam aperiam pariatur.</p>
-                <button class="btn btn-primary">Ver mas</button>
-            </div>
-        </div>
+      <div class="col-md-6">
+        <h2>Titulo dos</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
+          voluptatibus, repellat labore explicabo saepe iste! Animi deserunt
+          reprehenderit ipsa consequuntur, explicabo deleniti veniam? Earum vel,
+          et nostrum totam aperiam pariatur.
+        </p>
+        <button class="btn btn-primary">Ver mas</button>
+      </div>
+      <div class="col-md-6">
+        <h2>Titulo dos</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
+          voluptatibus, repellat labore explicabo saepe iste! Animi deserunt
+          reprehenderit ipsa consequuntur, explicabo deleniti veniam? Earum vel,
+          et nostrum totam aperiam pariatur.
+        </p>
+        <button class="btn btn-primary">Ver mas</button>
+      </div>
+      <div class="col-md-6">
+        <h2>Titulo dos</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
+          voluptatibus, repellat labore explicabo saepe iste! Animi deserunt
+          reprehenderit ipsa consequuntur, explicabo deleniti veniam? Earum vel,
+          et nostrum totam aperiam pariatur.
+        </p>
+        <button class="btn btn-primary">Ver mas</button>
+      </div>
+      <div class="col-md-6">
+        <h2>Titulo dos</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
+          voluptatibus, repellat labore explicabo saepe iste! Animi deserunt
+          reprehenderit ipsa consequuntur, explicabo deleniti veniam? Earum vel,
+          et nostrum totam aperiam pariatur.
+        </p>
+        <button class="btn btn-primary">Ver mas</button>
+      </div>
+      <div class="col-md-6">
+        <h2>Titulo dos</h2>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem
+          voluptatibus, repellat labore explicabo saepe iste! Animi deserunt
+          reprehenderit ipsa consequuntur, explicabo deleniti veniam? Earum vel,
+          et nostrum totam aperiam pariatur.
+        </p>
+        <button class="btn btn-primary">Ver mas</button>
+      </div>
     </div>
-        <!-- <div class="menu">
+  </div>
+  <!-- <div class="menu">
             <img class="arrow left" src="/static/fstreaming/src/assets/images/demo-arrow-left.png" alt="arrow" height="120">
             <img class="arrow up" src="/static/fstreaming/src/assets/images/demo-arrow-up.png" alt="arrow" height="150">
 
@@ -56,28 +88,29 @@
         </div>	     -->
 </template>
 <script>
-import {APIService} from '../../resource/APIService';
+import { APIService } from "../../resource/APIService";
 const apiService = new APIService();
 
 export default {
-    name:'home',
-    data() {
-        return {
-
-        }
-    },
-    methods: {
-        onLogout(){
-            apiService.onLogout().then((data) => {
-              if(data.success){
-                 window.location.href = data.link;
-              }else{
-                swal('No fue posible sair de tua conta','','error');
-              };
-            }).catch((error) =>{
-              swal('No fue posible sair de tua conta','','error');
-            });
-        }
-    },
-}
+  name: "home",
+  data() {
+    return {};
+  },
+  methods: {
+    onLogout() {
+      apiService
+        .onLogout()
+        .then(data => {
+          if (data.success) {
+            window.location.href = data.link;
+          } else {
+            swal("No fue posible sair de tua conta", "", "error");
+          }
+        })
+        .catch(error => {
+          swal("No fue posible sair de tua conta", "", "error");
+        });
+    }
+  }
+};
 </script>

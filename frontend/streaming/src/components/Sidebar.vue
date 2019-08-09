@@ -3,7 +3,12 @@
     <h3>Mooby Music</h3>
     <div class="user_data">
       <div class="content_profile">
-        <img class="img_profile" src="../assets/img/profilesteeve.jpg" alt title="profile" />
+        <img
+          class="img_profile"
+          src="../assets/img/profilesteeve.jpg"
+          alt
+          title="profile"
+        />
       </div>
       <div class="content-info">
         <h4 class="info-email">Steeve bernard Pypro</h4>
@@ -12,12 +17,12 @@
     <ul class="main-nav-ul">
       <li>
         <!-- <a href="#"><i class="fas fa-home"></i>Home</a> -->
-        <router-link class=".router-link-active" :to="{name: 'home'}">
+        <router-link class=".router-link-active" :to="{ name: 'home' }">
           <i class="fas fa-home"></i>Home
         </router-link>
       </li>
       <li>
-        <router-link :to="{name: 'recentplays'}">
+        <router-link :to="{ name: 'recentplays' }">
           <i class="fas fa-file-invoice"></i>Recents Plays
         </router-link>
       </li>
@@ -28,25 +33,23 @@
         </a>
         <ul>
           <li>
-            <router-link :to="{name: 'mysong'}">Song</router-link>
+            <router-link :to="{ name: 'mysong' }">Song</router-link>
           </li>
           <li>
-            <router-link :to="{name: 'myartiste'}">Artists</router-link>
+            <router-link :to="{ name: 'myartiste' }">Artists</router-link>
           </li>
           <li>
-            <router-link :to="{name: 'myalbum'}">Albums</router-link>
+            <router-link :to="{ name: 'myalbum' }">Albums</router-link>
           </li>
         </ul>
       </li>
       <li>
-        <router-link :to="{name: 'nowplaying'}">
+        <router-link :to="'nowplaying'">
           <i class="fas fa-file-invoice"></i>Now Playing
         </router-link>
       </li>
       <li>
-        <a href="#">
-          <i class="fas fa-heart"></i>Favoritos
-        </a>
+        <a href="#"> <i class="fas fa-heart"></i>Favoritos </a>
       </li>
     </ul>
     <div class="social_media">
@@ -69,6 +72,10 @@ export default {
   name: "sidebar",
   data() {
     return {};
+  },
+
+  computed:{
+
   },
   methods: {
 	  toogleSubmenu(){
